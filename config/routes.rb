@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
   get('/', { :controller => 'home', :action => 'home' })
+
+
+  get('/ranks', { :controller => 'list', :action => 'rank' })
+  get('/regions', { :controller => 'list', :action => 'region' })
+  get('/scores', { :controller => 'list', :action => 'score' })
   # Routes for the School resource:
   # CREATE
   get('/schools/new', { :controller => 'schools', :action => 'new' })
