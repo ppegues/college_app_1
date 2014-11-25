@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Adds Bootswatch CSS  -->
+  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/paper/bootstrap.min.css">
+
+  <!-- Adds Font Awesome -->
+  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+  <!-- Adds your custom styles -->
+
+  <link rel="stylesheet" type="text/css" href="my_styles.css">
+
+  <!-- Adds Bootstrap Javascript -->
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <title>College</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="row">
+        <p id="title" class="col-md-7"> Creative College Search</p>
+
+        <div class="col-md-5">
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="SignIn.html">Profile</a></li>
+          <li><a href="#"> Search Schools <span class="glyphicon glyphicon-search"></a></span></li>
+        </ul>
+        </div>
+      </div>s
+<%= yield %>
+
+</body>
+</html>

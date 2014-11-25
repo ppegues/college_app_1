@@ -1,0 +1,55 @@
+
+
+Write your custom styles and overrides of Bootstrap in this file.
+
+For example, if you wanted to change the body font:
+
+body {
+  font-family: "Vollkorn";
+
+}
+
+ul{
+list-style-type: none;
+}
+
+#title {
+  font-family: Times;
+  font-size: 50px;
+}
+
+#target{
+  border: solid;
+  border-color: green;
+}
+
+.buttons {
+  font-size: 30px;
+  text-align:
+
+}
+
+#categories {
+ color:white;
+ font-size: 30px;
+ text-align: center;
+ border:blue solid;
+ border-radius: 15px;
+ background-color: purple;
+}
+.row {
+  padding: 20px;
+}
+.break {
+  clear: both;
+}
+
+.text {
+font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
+font-size: 20px;
+}
+
+.box {
+  /*border: 1px solid black;*/
+}
+

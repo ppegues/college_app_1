@@ -1,0 +1,62 @@
+<div class="page-header">
+  <h1>Schools</h1>
+</div>
+
+<p><a href="/schools/new" class="btn btn-primary">Add a New School</a></p>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Image</th>
+      <th>Location</th>
+      <th>Region</th>
+      <th>Region name</th>
+      <th>Size</th>
+      <th>Tuition</th>
+      <th>Sat</th>
+      <th>Act</th>
+      <th>Gpa</th>
+      <th>Rank</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @schools.each do |school| %>
+      <tr>
+        <td><%= school.name %></td>
+        <td><%= school.description %></td>
+        <td><%= school.image %></td>
+        <td><%= school.location %></td>
+        <td><%= school.region_id %></td>
+        <td><%= school.region_name %></td>
+        <td><%= school.size %></td>
+        <td><%= school.tuition %></td>
+        <td><%= school.SAT %></td>
+        <td><%= school.ACT %></td>
+        <td><%= school.GPA %></td>
+        <td><%= school.rank %></td>
+        <td>
+          <a href="/schools/<%= school.id %>" class="btn btn-primary">
+            <i class="fa fa-search-plus"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/schools/<%= school.id %>/edit" class="btn btn-warning">
+            <i class="fa fa-edit"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/delete_school/<%= school.id %>" class="btn btn-danger">
+            <i class="fa fa-trash-o"></i>
+          </a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

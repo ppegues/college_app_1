@@ -1,0 +1,58 @@
+<div class="page-header">
+  <h1>Profiles</h1>
+</div>
+
+<p><a href="/profiles/new" class="btn btn-primary">Add a New Profile</a></p>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Image</th>
+      <th>High school</th>
+      <th>Gpa</th>
+      <th>Sat</th>
+      <th>Act</th>
+      <th>Extras</th>
+      <th>Size</th>
+      <th>Region</th>
+      <th>Rank</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @profiles.each do |profile| %>
+      <tr>
+        <td><%= profile.username %></td>
+        <td><%= profile.image %></td>
+        <td><%= profile.high_school %></td>
+        <td><%= profile.GPA %></td>
+        <td><%= profile.SAT %></td>
+        <td><%= profile.ACT %></td>
+        <td><%= profile.extras %></td>
+        <td><%= profile.size %></td>
+        <td><%= profile.region_id %></td>
+        <td><%= profile.rank %></td>
+        <td>
+          <a href="/profiles/<%= profile.id %>" class="btn btn-primary">
+            <i class="fa fa-search-plus"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/profiles/<%= profile.id %>/edit" class="btn btn-warning">
+            <i class="fa fa-edit"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/delete_profile/<%= profile.id %>" class="btn btn-danger">
+            <i class="fa fa-trash-o"></i>
+          </a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
