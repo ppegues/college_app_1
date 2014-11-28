@@ -8,13 +8,14 @@
   <thead>
     <tr>
       <th>Username</th>
+      <th>Email</th>
       <th>Image</th>
       <th>High school</th>
       <th>Gpa</th>
       <th>Sat</th>
       <th>Act</th>
       <th>Extras</th>
-      <th>Size</th>
+      <th>School size</th>
       <th>Region</th>
       <th>Rank</th>
       <th></th>
@@ -27,14 +28,15 @@
     <% @profiles.each do |profile| %>
       <tr>
         <td><%= profile.username %></td>
+        <td><%= profile.email %></td>
         <td><%= profile.image %></td>
         <td><%= profile.high_school %></td>
         <td><%= profile.GPA %></td>
         <td><%= profile.SAT %></td>
         <td><%= profile.ACT %></td>
-        <td><%= profile.extras %></td>
-        <td><%= profile.size %></td>
-        <td><%= profile.region_id %></td>
+        <td><%= profile.Extras %></td>
+        <td><%= profile.school_size %></td>
+        <td><%= profile.region %></td>
         <td><%= profile.rank %></td>
         <td>
           <a href="/profiles/<%= profile.id %>" class="btn btn-primary">

@@ -14,13 +14,13 @@
 <div class="row">
   <div class="col-md-12">
     <form action="/update_favorite/<%= @favorite.id %>" class="form-horizontal">
-      <!-- Label and input for profile_id -->
+      <!-- Label and input for user_id -->
       <div class="form-group">
-        <label for="profile_id" class="col-sm-2 control-label">
-          Profile
+        <label for="user_id" class="col-sm-2 control-label">
+          User
         </label>
         <div class="col-sm-10">
-          <input type="text" id="profile_id" name="profile_id" placeholder="Profile" class="form-control" value="<%= @favorite.profile_id %>">
+          <input type="text" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%= @favorite.user_id %>">
         </div>
       </div>
 
@@ -34,13 +34,13 @@
         </div>
       </div>
 
-      <!-- Label and input for region_id -->
+      <!-- Label and input for acceptance_difficulty -->
       <div class="form-group">
-        <label for="region_id" class="col-sm-2 control-label">
-          Region
+        <label for="acceptance_difficulty" class="col-sm-2 control-label">
+          Acceptance difficulty
         </label>
         <div class="col-sm-10">
-          <input type="text" id="region_id" name="region_id" placeholder="Region" class="form-control" value="<%= @favorite.region_id %>">
+          <input type="text" id="acceptance_difficulty" name="acceptance_difficulty" placeholder="Acceptance difficulty" class="form-control" value="<%= @favorite.acceptance_difficulty %>">
         </div>
       </div>
 
@@ -61,13 +61,13 @@
       </div>
       <div class="panel-body">
         <form action="/update_favorite/<%= @favorite.id %>" class="form-horizontal">
-          <!-- Label and input for profile_id -->
+          <!-- Label and input for user_id -->
           <div class="form-group">
-            <label for="profile_id" class="col-sm-2 control-label">
-              Profile
+            <label for="user_id" class="col-sm-2 control-label">
+              User
             </label>
             <div class="col-sm-10">
-              <input type="text" id="profile_id" name="profile_id" placeholder="Profile" class="form-control" value="<%= @favorite.profile_id %>">
+              <input type="text" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%= @favorite.user_id %>">
             </div>
           </div>
 
@@ -81,13 +81,13 @@
             </div>
           </div>
 
-          <!-- Label and input for region_id -->
+          <!-- Label and input for acceptance_difficulty -->
           <div class="form-group">
-            <label for="region_id" class="col-sm-2 control-label">
-              Region
+            <label for="acceptance_difficulty" class="col-sm-2 control-label">
+              Acceptance difficulty
             </label>
             <div class="col-sm-10">
-              <input type="text" id="region_id" name="region_id" placeholder="Region" class="form-control" value="<%= @favorite.region_id %>">
+              <input type="text" id="acceptance_difficulty" name="acceptance_difficulty" placeholder="Acceptance difficulty" class="form-control" value="<%= @favorite.acceptance_difficulty %>">
             </div>
           </div>
 

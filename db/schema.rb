@@ -11,26 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141125025102) do
+ActiveRecord::Schema.define(version: 20141128192431) do
 
   create_table "favorites", force: true do |t|
-    t.integer  "profile_id"
+    t.integer  "user_id"
     t.integer  "school_id"
-    t.integer  "region_id"
+    t.string   "acceptance_difficulty"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "profiles", force: true do |t|
     t.string   "username"
+    t.string   "email"
     t.string   "image"
     t.string   "high_school"
-    t.integer  "GPA"
-    t.integer  "SAT"
-    t.integer  "ACT"
-    t.text     "extras"
-    t.string   "size"
-    t.integer  "region_id"
+    t.string   "GPA"
+    t.string   "SAT"
+    t.string   "ACT"
+    t.text     "Extras"
+    t.string   "school_size"
+    t.string   "region"
     t.string   "rank"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -40,15 +41,15 @@ ActiveRecord::Schema.define(version: 20141125025102) do
     t.string   "name"
     t.string   "description"
     t.string   "image"
-    t.string   "location"
-    t.integer  "region_id"
-    t.string   "region_name"
-    t.integer  "size"
-    t.integer  "tuition"
-    t.integer  "SAT"
-    t.integer  "ACT"
-    t.integer  "GPA"
-    t.integer  "rank"
+    t.string   "region"
+    t.string   "size"
+    t.string   "tuition"
+    t.string   "acceptance_rate"
+    t.string   "SAT"
+    t.string   "ACT"
+    t.string   "GPA"
+    t.string   "Rank_Forbes"
+    t.string   "Percent_with_Financial_Aid"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

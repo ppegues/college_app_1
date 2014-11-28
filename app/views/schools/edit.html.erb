@@ -44,33 +44,13 @@
         </div>
       </div>
 
-      <!-- Label and input for location -->
+      <!-- Label and input for region -->
       <div class="form-group">
-        <label for="location" class="col-sm-2 control-label">
-          Location
-        </label>
-        <div class="col-sm-10">
-          <input type="text" id="location" name="location" placeholder="Location" class="form-control" value="<%= @school.location %>">
-        </div>
-      </div>
-
-      <!-- Label and input for region_id -->
-      <div class="form-group">
-        <label for="region_id" class="col-sm-2 control-label">
+        <label for="region" class="col-sm-2 control-label">
           Region
         </label>
         <div class="col-sm-10">
-          <input type="text" id="region_id" name="region_id" placeholder="Region" class="form-control" value="<%= @school.region_id %>">
-        </div>
-      </div>
-
-      <!-- Label and input for region_name -->
-      <div class="form-group">
-        <label for="region_name" class="col-sm-2 control-label">
-          Region name
-        </label>
-        <div class="col-sm-10">
-          <input type="text" id="region_name" name="region_name" placeholder="Region name" class="form-control" value="<%= @school.region_name %>">
+          <input type="text" id="region" name="region" placeholder="Region" class="form-control" value="<%= @school.region %>">
         </div>
       </div>
 
@@ -91,6 +71,16 @@
         </label>
         <div class="col-sm-10">
           <input type="text" id="tuition" name="tuition" placeholder="Tuition" class="form-control" value="<%= @school.tuition %>">
+        </div>
+      </div>
+
+      <!-- Label and input for acceptance_rate -->
+      <div class="form-group">
+        <label for="acceptance_rate" class="col-sm-2 control-label">
+          Acceptance rate
+        </label>
+        <div class="col-sm-10">
+          <input type="text" id="acceptance_rate" name="acceptance_rate" placeholder="Acceptance rate" class="form-control" value="<%= @school.acceptance_rate %>">
         </div>
       </div>
 
@@ -124,13 +114,23 @@
         </div>
       </div>
 
-      <!-- Label and input for rank -->
+      <!-- Label and input for Rank_Forbes -->
       <div class="form-group">
-        <label for="rank" class="col-sm-2 control-label">
-          Rank
+        <label for="Rank_Forbes" class="col-sm-2 control-label">
+          Rank forbes
         </label>
         <div class="col-sm-10">
-          <input type="text" id="rank" name="rank" placeholder="Rank" class="form-control" value="<%= @school.rank %>">
+          <input type="text" id="Rank_Forbes" name="Rank_Forbes" placeholder="Rank forbes" class="form-control" value="<%= @school.Rank_Forbes %>">
+        </div>
+      </div>
+
+      <!-- Label and input for Percent_with_Financial_Aid -->
+      <div class="form-group">
+        <label for="Percent_with_Financial_Aid" class="col-sm-2 control-label">
+          Percent with financial aid
+        </label>
+        <div class="col-sm-10">
+          <input type="text" id="Percent_with_Financial_Aid" name="Percent_with_Financial_Aid" placeholder="Percent with financial aid" class="form-control" value="<%= @school.Percent_with_Financial_Aid %>">
         </div>
       </div>
 
@@ -181,33 +181,13 @@
             </div>
           </div>
 
-          <!-- Label and input for location -->
+          <!-- Label and input for region -->
           <div class="form-group">
-            <label for="location" class="col-sm-2 control-label">
-              Location
-            </label>
-            <div class="col-sm-10">
-              <input type="text" id="location" name="location" placeholder="Location" class="form-control" value="<%= @school.location %>">
-            </div>
-          </div>
-
-          <!-- Label and input for region_id -->
-          <div class="form-group">
-            <label for="region_id" class="col-sm-2 control-label">
+            <label for="region" class="col-sm-2 control-label">
               Region
             </label>
             <div class="col-sm-10">
-              <input type="text" id="region_id" name="region_id" placeholder="Region" class="form-control" value="<%= @school.region_id %>">
-            </div>
-          </div>
-
-          <!-- Label and input for region_name -->
-          <div class="form-group">
-            <label for="region_name" class="col-sm-2 control-label">
-              Region name
-            </label>
-            <div class="col-sm-10">
-              <input type="text" id="region_name" name="region_name" placeholder="Region name" class="form-control" value="<%= @school.region_name %>">
+              <input type="text" id="region" name="region" placeholder="Region" class="form-control" value="<%= @school.region %>">
             </div>
           </div>
 
@@ -228,6 +208,16 @@
             </label>
             <div class="col-sm-10">
               <input type="text" id="tuition" name="tuition" placeholder="Tuition" class="form-control" value="<%= @school.tuition %>">
+            </div>
+          </div>
+
+          <!-- Label and input for acceptance_rate -->
+          <div class="form-group">
+            <label for="acceptance_rate" class="col-sm-2 control-label">
+              Acceptance rate
+            </label>
+            <div class="col-sm-10">
+              <input type="text" id="acceptance_rate" name="acceptance_rate" placeholder="Acceptance rate" class="form-control" value="<%= @school.acceptance_rate %>">
             </div>
           </div>
 
@@ -261,13 +251,23 @@
             </div>
           </div>
 
-          <!-- Label and input for rank -->
+          <!-- Label and input for Rank_Forbes -->
           <div class="form-group">
-            <label for="rank" class="col-sm-2 control-label">
-              Rank
+            <label for="Rank_Forbes" class="col-sm-2 control-label">
+              Rank forbes
             </label>
             <div class="col-sm-10">
-              <input type="text" id="rank" name="rank" placeholder="Rank" class="form-control" value="<%= @school.rank %>">
+              <input type="text" id="Rank_Forbes" name="Rank_Forbes" placeholder="Rank forbes" class="form-control" value="<%= @school.Rank_Forbes %>">
+            </div>
+          </div>
+
+          <!-- Label and input for Percent_with_Financial_Aid -->
+          <div class="form-group">
+            <label for="Percent_with_Financial_Aid" class="col-sm-2 control-label">
+              Percent with financial aid
+            </label>
+            <div class="col-sm-10">
+              <input type="text" id="Percent_with_Financial_Aid" name="Percent_with_Financial_Aid" placeholder="Percent with financial aid" class="form-control" value="<%= @school.Percent_with_Financial_Aid %>">
             </div>
           </div>
 

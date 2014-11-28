@@ -16,15 +16,15 @@ class SchoolsController < ApplicationController
     @school.name = params[:name]
     @school.description = params[:description]
     @school.image = params[:image]
-    @school.location = params[:location]
-    @school.region_id = params[:region_id]
-    @school.region_name = params[:region_name]
+    @school.region = params[:region]
     @school.size = params[:size]
     @school.tuition = params[:tuition]
+    @school.acceptance_rate = params[:acceptance_rate]
     @school.SAT = params[:SAT]
     @school.ACT = params[:ACT]
     @school.GPA = params[:GPA]
-    @school.rank = params[:rank]
+    @school.Rank_Forbes = params[:Rank_Forbes]
+    @school.Percent_with_Financial_Aid = params[:Percent_with_Financial_Aid]
 
     if @school.save
       redirect_to "/schools", :notice => "School created successfully."
@@ -43,15 +43,15 @@ class SchoolsController < ApplicationController
     @school.name = params[:name]
     @school.description = params[:description]
     @school.image = params[:image]
-    @school.location = params[:location]
-    @school.region_id = params[:region_id]
-    @school.region_name = params[:region_name]
+    @school.region = params[:region]
     @school.size = params[:size]
     @school.tuition = params[:tuition]
+    @school.acceptance_rate = params[:acceptance_rate]
     @school.SAT = params[:SAT]
     @school.ACT = params[:ACT]
     @school.GPA = params[:GPA]
-    @school.rank = params[:rank]
+    @school.Rank_Forbes = params[:Rank_Forbes]
+    @school.Percent_with_Financial_Aid = params[:Percent_with_Financial_Aid]
 
     if @school.save
       redirect_to "/schools", :notice => "School updated successfully."

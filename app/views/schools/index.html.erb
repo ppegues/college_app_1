@@ -10,15 +10,15 @@
       <th>Name</th>
       <th>Description</th>
       <th>Image</th>
-      <th>Location</th>
       <th>Region</th>
-      <th>Region name</th>
       <th>Size</th>
       <th>Tuition</th>
+      <th>Acceptance rate</th>
       <th>Sat</th>
       <th>Act</th>
       <th>Gpa</th>
-      <th>Rank</th>
+      <th>Rank forbes</th>
+      <th>Percent with financial aid</th>
       <th></th>
       <th></th>
       <th></th>
@@ -31,15 +31,15 @@
         <td><%= school.name %></td>
         <td><%= school.description %></td>
         <td><%= school.image %></td>
-        <td><%= school.location %></td>
-        <td><%= school.region_id %></td>
-        <td><%= school.region_name %></td>
+        <td><%= school.region %></td>
         <td><%= school.size %></td>
         <td><%= school.tuition %></td>
+        <td><%= school.acceptance_rate %></td>
         <td><%= school.SAT %></td>
         <td><%= school.ACT %></td>
         <td><%= school.GPA %></td>
-        <td><%= school.rank %></td>
+        <td><%= school.Rank_Forbes %></td>
+        <td><%= school.Percent_with_Financial_Aid %></td>
         <td>
           <a href="/schools/<%= school.id %>" class="btn btn-primary">
             <i class="fa fa-search-plus"></i>

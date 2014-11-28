@@ -13,9 +13,9 @@ class FavoritesController < ApplicationController
 
   def create
     @favorite = Favorite.new
-    @favorite.profile_id = params[:profile_id]
+    @favorite.user_id = params[:user_id]
     @favorite.school_id = params[:school_id]
-    @favorite.region_id = params[:region_id]
+    @favorite.acceptance_difficulty = params[:acceptance_difficulty]
 
     if @favorite.save
       redirect_to "/favorites", :notice => "Favorite created successfully."
@@ -31,9 +31,9 @@ class FavoritesController < ApplicationController
   def update
     @favorite = Favorite.find(params[:id])
 
-    @favorite.profile_id = params[:profile_id]
+    @favorite.user_id = params[:user_id]
     @favorite.school_id = params[:school_id]
-    @favorite.region_id = params[:region_id]
+    @favorite.acceptance_difficulty = params[:acceptance_difficulty]
 
     if @favorite.save
       redirect_to "/favorites", :notice => "Favorite updated successfully."

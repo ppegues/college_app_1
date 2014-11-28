@@ -14,14 +14,15 @@ class ProfilesController < ApplicationController
   def create
     @profile = Profile.new
     @profile.username = params[:username]
+    @profile.email = params[:email]
     @profile.image = params[:image]
     @profile.high_school = params[:high_school]
     @profile.GPA = params[:GPA]
     @profile.SAT = params[:SAT]
     @profile.ACT = params[:ACT]
-    @profile.extras = params[:extras]
-    @profile.size = params[:size]
-    @profile.region_id = params[:region_id]
+    @profile.Extras = params[:Extras]
+    @profile.school_size = params[:school_size]
+    @profile.region = params[:region]
     @profile.rank = params[:rank]
 
     if @profile.save
@@ -39,14 +40,15 @@ class ProfilesController < ApplicationController
     @profile = Profile.find(params[:id])
 
     @profile.username = params[:username]
+    @profile.email = params[:email]
     @profile.image = params[:image]
     @profile.high_school = params[:high_school]
     @profile.GPA = params[:GPA]
     @profile.SAT = params[:SAT]
     @profile.ACT = params[:ACT]
-    @profile.extras = params[:extras]
-    @profile.size = params[:size]
-    @profile.region_id = params[:region_id]
+    @profile.Extras = params[:Extras]
+    @profile.school_size = params[:school_size]
+    @profile.region = params[:region]
     @profile.rank = params[:rank]
 
     if @profile.save
