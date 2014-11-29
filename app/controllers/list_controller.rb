@@ -12,8 +12,7 @@ class ListController < ApplicationController
   end
 
   def south
-    @region - School.find(:region)
-    @south_schools = School.where({:region => @south})
+    @south_schools = School.where({:region => params["south"]})
   end
 
   def midwest
