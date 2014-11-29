@@ -4,7 +4,15 @@ Rails.application.routes.draw do
 
 
   get('/ranks', { :controller => 'list', :action => 'rank' })
+
+  # List of Regions
   get('/regions', { :controller => 'list', :action => 'region' })
+  get('/regions/northeast', { :controller => 'list', :action => 'northeast' })
+  get('/regions/south', { :controller => 'list', :action => 'south' })
+  get('/regions/midwest', { :controller => 'list', :action => 'midwest' })
+  get('/regions/west', { :controller => 'list', :action => 'west' })
+
+
   get('/scores', { :controller => 'list', :action => 'score' })
   # Routes for the School resource:
   # CREATE

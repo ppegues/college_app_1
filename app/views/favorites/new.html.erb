@@ -12,48 +12,6 @@
 </div>
 
 <div class="row">
-  <div class="col-md-12">
-    <form action="/create_favorite" class="form-horizontal">
-      <!-- Label and input for user_id -->
-      <div class="form-group">
-        <label for="user_id" class="col-sm-2 control-label">
-          User
-        </label>
-        <div class="col-sm-10">
-          <input type="text" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%= @favorite.user_id %>">
-        </div>
-      </div>
-
-      <!-- Label and input for school_id -->
-      <div class="form-group">
-        <label for="school_id" class="col-sm-2 control-label">
-          School
-        </label>
-        <div class="col-sm-10">
-          <input type="text" id="school_id" name="school_id" placeholder="School" class="form-control" value="<%= @favorite.school_id %>">
-        </div>
-      </div>
-
-      <!-- Label and input for acceptance_difficulty -->
-      <div class="form-group">
-        <label for="acceptance_difficulty" class="col-sm-2 control-label">
-          Acceptance difficulty
-        </label>
-        <div class="col-sm-10">
-          <input type="text" id="acceptance_difficulty" name="acceptance_difficulty" placeholder="Acceptance difficulty" class="form-control" value="<%= @favorite.acceptance_difficulty %>">
-        </div>
-      </div>
-
-      <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-          <input type="submit" value="Create Favorite" class="btn btn-primary">
-        </div>
-      </div>
-    </form>
-  </div>
-</div>
-
-<div class="row">
   <div class="col-md-offset-3 col-md-6">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -82,15 +40,6 @@
           </div>
 
           <!-- Label and input for acceptance_difficulty -->
-          <div class="form-group">
-            <label for="acceptance_difficulty" class="col-sm-2 control-label">
-              Acceptance difficulty
-            </label>
-            <div class="col-sm-10">
-              <input type="text" id="acceptance_difficulty" name="acceptance_difficulty" placeholder="Acceptance difficulty" class="form-control" value="<%= @favorite.acceptance_difficulty %>">
-            </div>
-          </div>
-
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
               <input type="submit" value="Create Favorite" class="btn btn-primary">

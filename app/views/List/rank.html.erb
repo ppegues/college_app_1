@@ -10,17 +10,11 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>1</td>
-      <td>Column content</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Column content</td>
-    </tr>
+   <% @schools.each do |school| %>
     <tr class="active">
-      <td>3</td>
-      <td>Column content</td>
+      <td><%= school.Rank_Forbes     %></td>
+      <td><%= school.name %></td>
     </tr>
+  <% end %>
   </tbody>
 </table>

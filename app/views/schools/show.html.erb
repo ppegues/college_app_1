@@ -1,10 +1,8 @@
 <div class="page-header">
-  <h1>School #<%= @school.id %></h1>
+  <h1><%= @school.name %></h1>
 </div>
 
 <dl class="dl-horizontal">
-  <dt>Name</dt>
-  <dd><%= @school.name %></dd>
 
   <dt>Description</dt>
   <dd><%= @school.description %></dd>
@@ -24,10 +22,10 @@
   <dt>Acceptance rate</dt>
   <dd><%= @school.acceptance_rate %></dd>
 
-  <dt>Sat</dt>
+  <dt>SAT</dt>
   <dd><%= @school.SAT %></dd>
 
-  <dt>Act</dt>
+  <dt>ACT</dt>
   <dd><%= @school.ACT %></dd>
 
   <dt>Gpa</dt>
