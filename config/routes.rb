@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
 
   get('/ranks', { :controller => 'list', :action => 'rank' })
+  get('/aid', { :controller => 'list', :action => 'aid' })
 
   # List of Regions
   get('/regions', { :controller => 'list', :action => 'region' })

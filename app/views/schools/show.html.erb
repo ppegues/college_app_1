@@ -1,42 +1,65 @@
-<div class="page-header">
-  <h1><%= @school.name %></h1>
+
+<div class="page-header" >
+  <div class="col-md-offset-4">
+  <h1 class="hometitle" ><%= @school.name %></h1>
+</div>
 </div>
 
-<dl class="dl-horizontal">
+<div class="row">
+<p class="col-md-offset-5"><img src="<%= @school.image %>" class="img-responsive" alt="Responsive image"></p>
+</div>
 
-  <dt>Description</dt>
-  <dd><%= @school.description %></dd>
+<div class="row">
+  <div class="col-md-6">
+    <dt>Description</dt>
+    <dd>Info on the school. Mention what the school is known for and what type of school it is.<%= @school.description %></dd>
+  </div>
 
-  <dt>Image</dt>
-  <dd><%= @school.image %></dd>
-
+  <div class="col-md-2">
   <dt>Region</dt>
-  <dd><%= @school.region %></dd>
-
+  <p><%= @school.region %></p>
+  <dt>Location</dt>
+  <p>School's State </p>
   <dt>Size</dt>
-  <dd><%= @school.size %></dd>
-
+  <p><%= @school.size %></p>
   <dt>Tuition</dt>
-  <dd><%= @school.tuition %></dd>
+  <p><%= @school.tuition %></p>
 
-  <dt>Acceptance rate</dt>
-  <dd><%= @school.acceptance_rate %></dd>
+  </div>
+  <div class="col-md-3">
+    <dt>Pie Charts</dt>
+    Graphs for Gender and Diversity Here
+  </div>
+</div>
 
-  <dt>SAT</dt>
-  <dd><%= @school.SAT %></dd>
+<div class="row">
+  <div class="col-md-6">
+    <h4>Rankings</h4>
+    <p>Forbes #<%= @school.Rank_Forbes %></p>
+    <h4>Honors</h4>
 
-  <dt>ACT</dt>
-  <dd><%= @school.ACT %></dd>
+    <dt>Percent of student with Financial Aid</dt>
+  <p><%= @school.Percent_with_Financial_Aid %></p>
 
-  <dt>Gpa</dt>
-  <dd><%= @school.GPA %></dd>
+  </div>
 
-  <dt>Rank forbes</dt>
-  <dd><%= @school.Rank_Forbes %></dd>
+  <div class="col-md-6">
+    <dl  class="dl-horizontal">
+    <h4>Getting In (Table)</h4>
+  <h6>
+    <dt>Avg GPA</dt>
+      <dd><%= @school.GPA %></dd>
+    <dt>SAT Range</dt>
+     <dd><%= @school.SAT %></dd>
+    <dt>ACT Range</dt>
+     <dd><%= @school.ACT %></dd>
+   <dt>Acceptance Rate</dt>
+     <dd><%= @school.acceptance_rate %></dd>
+    </h6>
+  </dl>
+  </div>
+</div>
 
-  <dt>Percent with financial aid</dt>
-  <dd><%= @school.Percent_with_Financial_Aid %></dd>
 
-</dl>
 
 
