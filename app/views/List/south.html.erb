@@ -1,6 +1,8 @@
+<h2>Schools in the South</h2>
+
 <% @south_schools.each do |school| %>
-  <%= school.name %>
+  <a href="/schools/<%= school.id %>"><%= school.name %></a>
 
 <% end %>
 
-Test - South
+

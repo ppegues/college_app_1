@@ -94,35 +94,46 @@
         </div>
       </div>
 
-      <!-- Label and input for school_size -->
-      <div class="form-group">
-        <label for="school_size" class="col-sm-2 control-label">
-          School size
-        </label>
-        <div class="col-sm-10">
-          <input type="text" id="school_size" name="school_size" placeholder="School size" class="form-control" value="<%= @profile.school_size %>">
-        </div>
-      </div>
+       <H3>SUMBIT YOUR SCHOOL PREFERENCES</H3>
 
-      <!-- Label and input for region -->
-      <div class="form-group">
-        <label for="region" class="col-sm-2 control-label">
-          Region
-        </label>
-        <div class="col-sm-10">
-          <input type="text" id="region" name="region" placeholder="Region" class="form-control" value="<%= @profile.region %>">
-        </div>
+  <div class="form-group">
+    <label for="region" class="col-sm-2 control-label">
+       Region
+    </label>
+      <div class="col-lg-10">
+        <select class="form-control" id="select" name="region">
+          <option></option>
+          <option>Northeast</option>
+          <option>South</option>
+          <option>Midwest</option>
+          <option>West</option>
+        </select>
       </div>
+   </div>
 
-      <!-- Label and input for rank -->
       <div class="form-group">
-        <label for="rank" class="col-sm-2 control-label">
-          Rank
-        </label>
-        <div class="col-sm-10">
-          <input type="text" id="rank" name="rank" placeholder="Rank" class="form-control" value="<%= @profile.rank %>">
-        </div>
+      <label for="select" class="col-lg-2 control-label">School Size</label>
+      <div class="col-lg-10">
+        <select class="form-control" id="select" name="school_size" value="<%= @profile.school_size %>">
+          <option></option>
+          <option>Small (less than 5,000)</option>
+          <option>Medium (5,000 to 10,000)</option>
+          <option>Large (10,000+)</option>
+        </select>
       </div>
+    </div>
+
+<div class="form-group">
+      <label for="select" class="col-lg-2 control-label">School Rank</label>
+      <div class="col-lg-10">
+        <select class="form-control" id="select" name="rank">
+          <option></option>
+          <option>Top 20</option>
+          <option>Top 50</option>
+          <option>Top 100</option>
+        </select>
+      </div>
+    </div>
 
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">

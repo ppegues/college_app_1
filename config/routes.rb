@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
 
   get('/ranks', { :controller => 'list', :action => 'rank' })
+  get('/scores', { :controller => 'list', :action => 'score' })
   get('/aid', { :controller => 'list', :action => 'aid' })
+
 
   # List of Regions
   get('/regions', { :controller => 'list', :action => 'region' })
@@ -14,7 +16,6 @@ Rails.application.routes.draw do
   get('/regions/west', { :controller => 'list', :action => 'west' })
 
 
-  get('/scores', { :controller => 'list', :action => 'score' })
   # Routes for the School resource:
   # CREATE
   get('/schools/new', { :controller => 'schools', :action => 'new' })
@@ -57,6 +58,7 @@ Rails.application.routes.draw do
   # READ
   get('/profiles', { :controller => 'profiles', :action => 'index' })
   get('/profiles/:id', { :controller => 'profiles', :action => 'show' })
+  get('/profiles/preference/:id', { :controller => 'preference', :action => 'filter' })
 
   # UPDATE
   get('/profiles/:id/edit', { :controller => 'profiles', :action => 'edit' })

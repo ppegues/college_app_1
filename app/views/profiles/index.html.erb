@@ -1,4 +1,4 @@
-Delete this page
+Delete this page or Make it so it only shows up for student's from the same school
 <div class="page-header">
   <h1>Profiles</h1>
 </div>
@@ -23,7 +23,7 @@ Delete this page
   <tbody>
     <% @profiles.each do |profile| %>
       <tr>
-        <td><%= profile.image %></td>
+        <td class="thumbnail"><img src="<%= profile.image %>" class="img-circle"></td>
         <td><%= profile.username %></td>
         <td><%= profile.high_school %></td>
         <td><%= profile.school_size %></td>
