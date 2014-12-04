@@ -14,15 +14,15 @@ class PreferenceController < ApplicationController
     #Size Filter
 
     if @profile.school_size == "Small (less than 5,000)"
-      @region_size_schools = @region_schools.where(:size < 5000)
+      @region_size_schools = @region_schools.where("size < 5000")
     else
 
       if @profile.school_size == "Medium (5,000 to 10,000)"
-       @region_size_schools = @region_schools.where(5000 < :size < 10000)
+       @region_size_schools = @region_schools.where("size >= 5000 AND size < 10000")
       else
 
         if @profile.school_size == "Large (10,000+)"
-        @region_size_schools = @region_schools.where(:size > 10000)
+        @region_size_schools = @region_schools.where("size >= 10000")
         else
 
           @region_size_schools = @region_schools

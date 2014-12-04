@@ -23,6 +23,16 @@
   </div>
 
   <div class="field" class="form-group">
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+  </div>
+
+  <div class="field" class="form-group">
+    <%= f.label :high_school %>
+    <%= f.text_field :high_school %>
+  </div>
+
+  <div class="field" class="form-group">
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i>
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
