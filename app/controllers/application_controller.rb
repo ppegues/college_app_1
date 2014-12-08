@@ -16,4 +16,9 @@ class ApplicationController < ActionController::Base
 
     devise_parameter_sanitizer.for(:account_update) << :high_school
   end
+
+    #@school_search = gets.chomp
+
+    #@school = School.find(:name => "@school_search")
+
 end

@@ -2,6 +2,6 @@
 
 <p>
  <% @region_size_schools.each do |school| %>
-   <p><%= school.name %></p>
+   <a href="/schools/<%= school.id %>"><p><%= school.name %></p></a>
  <% end %>
 </p>

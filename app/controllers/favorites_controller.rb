@@ -9,6 +9,7 @@ class FavoritesController < ApplicationController
 
   def new
     @favorite = Favorite.new
+    @profiles = Profile.all
   end
 
   def create

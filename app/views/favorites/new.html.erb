@@ -25,7 +25,11 @@
               User
             </label>
             <div class="col-sm-10">
-              <input type="text" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%= @favorite.user_id %>">
+            <select class="form-control" id="user_id" name="user_id" placeholder="Test" value="">
+             <% @profiles.each do |profile| %>
+              <option> <%= profile.username %></option>
+              <% end %>
+             </select>
             </div>
           </div>
 
