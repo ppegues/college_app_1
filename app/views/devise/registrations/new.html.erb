@@ -31,6 +31,35 @@
     <%= f.text_field :high_school %>
   </div>
 
+  <div class="field" class="form-group">
+    <%= f.label :GPA, 'GPA' %>
+    <%= f.text_field :GPA %>
+  </div>
+
+  <div class="field" class="form-group">
+    <%= f.label :SAT %>
+    <%= f.text_field :SAT %>
+  </div>
+
+  <div class="field" class="form-group">
+    <%= f.label :ACT %>
+    <%= f.text_field :ACT %>
+  </div>
+
+  <div class="field" class="form-group">
+    <%= f.label :Extras, 'Extracurilar Activities and Leadership Roles' %>
+    <%= f.text_field :Extras %>
+  </div>
+
+  <div class="form-group">
+    <h4>SUMBIT YOUR SCHOOL PREFERENCES</h4>
+  </div>
+
+  <div class="field" class="form-group">
+    <%= f.label :Region, 'Favorite Region' %>
+    <%= f.select :region, options_for_select(['Northeast', 'South', 'Midwest', 'West']), {:include_blank => true}%>
+  </div>
+
   <div class="actions" class="form-group">
     <%= f.submit "Sign up" %>
   </div>
