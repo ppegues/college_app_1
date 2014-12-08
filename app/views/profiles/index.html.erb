@@ -23,7 +23,7 @@ Delete this page or Make it so it only shows up for student's from the same scho
   <tbody>
     <% @profiles.each do |profile| %>
       <tr>
-        <td class="thumbnail"><img src="<%= profile.image %>" class="img-circle"></td>
+        <td class="thumbnail"><img src="<%= profile.image %>" class="profile_pic"></td>
         <td><%= profile.username %></td>
         <td><%= profile.high_school %></td>
         <td><%= profile.school_size %></td>

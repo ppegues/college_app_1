@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :profiles
   root 'home#home'
 
+
   get('/', { :controller => 'home', :action => 'home' })
 
 

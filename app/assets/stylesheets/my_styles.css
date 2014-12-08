@@ -23,10 +23,14 @@ list-style-type: none;
   border-color: green;
 }
 
+.profile_pic{
+  width: 80px;
+  height: 80px;
+}
+
 .buttons {
   font-size: 30px;
   text-align:
-
 }
 
 #categories {
