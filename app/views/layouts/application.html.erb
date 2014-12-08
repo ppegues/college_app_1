@@ -45,8 +45,15 @@
       <input type="text" class="form-control col-lg-8" placeholder="Search Schools">
     </form>
 
-      <li><a href="#">Sign In</a></li>
-      <li><a href="/profiles/sign_out">Sign Out</a>
+      <li><% if profile_signed_in? %>
+        <%= link_to('Logout', destroy_profile_session_path, :method => :delete) %>
+        </li>
+        <% else %>
+          <li>
+            <%= link_to('Login', new_profile_session_path)  %>
+          </li>
+      <% end %>
+
       <li><a href="/profiles/sign_up">Create an Account</a></li>
       </li>
     </ul>
