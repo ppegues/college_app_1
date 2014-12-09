@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141208224501) do
+ActiveRecord::Schema.define(version: 20141209061358) do
 
   create_table "favorites", force: true do |t|
     t.integer  "profile_id"
@@ -64,6 +64,13 @@ ActiveRecord::Schema.define(version: 20141208224501) do
     t.datetime "updated_at"
     t.integer  "rank_forbes"
     t.integer  "size"
+    t.integer  "avg_GPA"
+    t.integer  "avg_SAT"
+    t.integer  "avg_ACT"
+    t.integer  "lower_SAT"
+    t.integer  "upper_SAT"
+    t.integer  "lower_ACT"
+    t.integer  "upper_ACT"
   end
 
 end

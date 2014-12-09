@@ -1,10 +1,10 @@
 <% if @school.errors.any? %>
-  <% @school.errors.full_messages.each do |message| %>
-    <div class="alert alert-dismissable alert-danger">
-      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-      <%= message %>
-    </div>
-  <% end %>
+<% @school.errors.full_messages.each do |message| %>
+<div class="alert alert-dismissable alert-danger">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+  <%= message %>
+</div>
+<% end %>
 <% end %>
 
 <div class="page-header">
@@ -94,6 +94,33 @@
         </div>
       </div>
 
+      <div class="form-group">
+        <label for="avg_SAT" class="col-sm-2 control-label">
+          Average SAT score
+        </label>
+        <div class="col-sm-10">
+          <input type="text" id="SAT" name="avg_SAT" placeholder="avg_SAT" class="form-control" value="<%= @school.avg_SAT %>">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="SAT" class="col-sm-2 control-label">
+          Lower SAT Score
+        </label>
+        <div class="col-sm-10">
+          <input type="text" id="SAT" name="lower_SAT" placeholder="Lower" class="form-control" value="<%= @school.lower_SAT %>">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="upper_SAT" class="col-sm-2 control-label">
+          Upper SAT score
+        </label>
+        <div class="col-sm-10">
+          <input type="text" id="SAT" name="upper_SAT" placeholder="Upper" class="form-control" value="<%= @school.upper_SAT %>">
+        </div>
+      </div>
+
       <!-- Label and input for ACT -->
       <div class="form-group">
         <label for="ACT" class="col-sm-2 control-label">
@@ -104,13 +131,49 @@
         </div>
       </div>
 
+      <div class="form-group">
+        <label for="avg_SAT" class="col-sm-2 control-label">
+          Average ACT score
+        </label>
+        <div class="col-sm-10">
+          <input type="text" id="SAT" name="avg_ACT" placeholder="avg_ACT" class="form-control" value="<%= @school.avg_ACT %>">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="ACT" class="col-sm-2 control-label">
+          Lower ACT Score
+        </label>
+        <div class="col-sm-10">
+          <input type="text" id="ACT" name="lower_ACT" placeholder="Lower" class="form-control" value="<%= @school.lower_ACT %>">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="upper_ACT" class="col-sm-2 control-label">
+          Upper ACT score
+        </label>
+        <div class="col-sm-10">
+          <input type="text" id="ACT" name="upper_ACT" placeholder="Upper" class="form-control" value="<%= @school.upper_ACT %>">
+        </div>
+      </div>
+
       <!-- Label and input for GPA -->
       <div class="form-group">
         <label for="GPA" class="col-sm-2 control-label">
-          Gpa
+          Gpa Range
         </label>
         <div class="col-sm-10">
           <input type="text" id="GPA" name="GPA" placeholder="Gpa" class="form-control" value="<%= @school.GPA %>">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="avg_GPA" class="col-sm-2 control-label">
+          Average GPA score
+        </label>
+        <div class="col-sm-10">
+          <input type="text" id="GPA" name="avg_GPA" placeholder="avg_GPA" class="form-control" value="<%= @school.avg_GPA %>">
         </div>
       </div>
 

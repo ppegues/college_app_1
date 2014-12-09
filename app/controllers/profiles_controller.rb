@@ -52,7 +52,7 @@ class ProfilesController < ApplicationController
     @profile.rank = params[:rank]
 
     if @profile.save
-      redirect_to "/profiles", :notice => "Profile updated successfully."
+      redirect_to "/profiles/<%= current_profile.id %>", :notice => "Profile updated successfully."
     else
       render 'edit'
     end

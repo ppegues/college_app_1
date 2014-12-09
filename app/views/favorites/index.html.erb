@@ -19,8 +19,8 @@
   <tbody>
     <% @favorites.each do |favorite| %>
       <tr>
-        <td><%= favorite.profile_id %></td>
-        <td><%= favorite.school_id %></td>
+        <td><%= Profile.find_by(:id => favorite.profile_id).username %></td>
+        <td><%= School.find_by({:id => favorite.school_id}).name %></td>
         <td><%= favorite.acceptance_difficulty %></td>
         <td>
           <a href="/favorites/<%= favorite.id %>" class="btn btn-primary">
