@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141209061358) do
+ActiveRecord::Schema.define(version: 20141209225840) do
 
   create_table "favorites", force: true do |t|
     t.integer  "profile_id"
@@ -32,18 +32,18 @@ ActiveRecord::Schema.define(version: 20141209061358) do
     t.string   "rank"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "encrypted_password",                              default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",                                   default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.integer  "GPA"
     t.integer  "ACT"
     t.integer  "SAT"
+    t.decimal  "GPA",                    precision: 30, scale: 2
   end
 
   add_index "profiles", ["email"], name: "index_profiles_on_email", unique: true
@@ -64,13 +64,13 @@ ActiveRecord::Schema.define(version: 20141209061358) do
     t.datetime "updated_at"
     t.integer  "rank_forbes"
     t.integer  "size"
-    t.integer  "avg_GPA"
     t.integer  "avg_SAT"
     t.integer  "avg_ACT"
     t.integer  "lower_SAT"
     t.integer  "upper_SAT"
     t.integer  "lower_ACT"
     t.integer  "upper_ACT"
+    t.decimal  "avg_GPA",                    precision: 30, scale: 2
   end
 
 end
