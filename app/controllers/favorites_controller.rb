@@ -2,6 +2,20 @@ class FavoritesController < ApplicationController
   def index
     @favorites = Favorite.all
 
+    if current_profile.GPA > School.avg_GPA && (current_profile.SAT > School.avg_SAT || current_profile.ACT > School.avg_ACT)
+      @difficulty = "Safe"
+    else
+      if current_profile.GPA < School.avg_GPA && (current_profile.SAT < School.avg_SAT || current_profile.ACT < School.avg_ACT)
+        @difficulty = "Stretch"
+      else
+        if (current_profile.GPA > School.avg_GPA && (current_profile.SAT >= School.lower_SAT && current_profile.SAT <= School.upper_SAT)
+          @difficulty = "Target"
+        else
+          if (current_profile.GPA > School.avg_GPA && (current_profile.ACT >= School.lower_ACT && current_profile.ACT <= School.upper_ACT)
+          @difficulty = "Target"
+        else
+          if (current_profile.GPA < School.avg_GPA && (current_profile.SAT > School.avg_SAT || current_profile.ACT > School.avg_ACT)
+          @difficulty = "Target"
 
   end
 
