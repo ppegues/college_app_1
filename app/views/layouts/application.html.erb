@@ -16,8 +16,8 @@
   <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   <title>College</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -45,16 +45,22 @@
       <input type="text" class="form-control col-lg-8" placeholder="Search Schools">
     </form>
 
-      <li><% if profile_signed_in? %>
-        <%= link_to('Logout', destroy_profile_session_path, :method => :delete) %>
+      <% if profile_signed_in? %>
+        <li>
+          <%= link_to('Logout', destroy_profile_session_path, :method => :delete) %>
         </li>
-        <% else %>
-          <li>
-            <%= link_to('Login', new_profile_session_path)  %>
-          </li>
+        <li>
+          <a href="/profiles/edit">Signed in as <%= current_profile.username %></a>
+        </li>
+      <% else %>
+        <li>
+          <%= link_to('Login', new_profile_session_path)  %>
+        </li>
+        <li>
+          <a href="/profiles/sign_up">Create an Account</a>
+        </li>
       <% end %>
 
-      <li><a href="/profiles/sign_up">Create an Account</a></li>
       </li>
     </ul>
   </div>

@@ -20,8 +20,8 @@
     <% @favorites.each do |favorite| %>
       <tr>
         <td><%= Profile.find_by(:id => favorite.profile_id).username %></td>
-        <td><%= School.find_by({:id => favorite.school_id}).name %></td>
-        <td><%= @difficulty= %></td>
+        <td><a href="/schools/<%= School.find_by({:id => favorite.school_id}).id %>"><%= School.find_by({:id => favorite.school_id}).name %></a></td>
+        <td><%= @difficulty %></td>
         <td>
           <a href="/favorites/<%= favorite.id %>" class="btn btn-primary">
             <i class="fa fa-search-plus"></i>

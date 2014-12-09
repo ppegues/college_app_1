@@ -5,6 +5,7 @@ class SchoolsController < ApplicationController
 
   def show
     @school = School.find(params[:id])
+    @favorite = Favorite.find_by(:profile_id => current_profile.id)
   end
 
   def new
@@ -48,7 +49,14 @@ class SchoolsController < ApplicationController
     @school.tuition = params[:tuition]
     @school.acceptance_rate = params[:acceptance_rate]
     @school.SAT = params[:SAT]
+    @school.avg_SAT = params[:avg_SAT]
+    @school.lower_SAT = params[:lower_SAT]
+    @school.upper_SAT = params[:upper_SAT]
+    @school.avg_ACT = params[:avg_ACT]
+    @school.lower_ACT = params[:lower_ACT]
+    @school.upper_ACT = params[:upper_ACT]
     @school.ACT = params[:ACT]
+    @school.avg_GPA = params[:avg_GPA]
     @school.GPA = params[:GPA]
     @school.rank_forbes = params[:rank_forbes]
     @school.Percent_with_Financial_Aid = params[:Percent_with_Financial_Aid]

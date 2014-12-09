@@ -1,31 +1,46 @@
 
 <div class="page-header" >
   <div class="col-md-offset-4">
-  <h1 class="hometitle" ><%= @school.name %></h1>
-</div>
+    <h1 class="hometitle" ><%= @school.name %></h1>
+  </div>
 </div>
 
 <div class="row">
-<p class="col-md-offset-5"><img src="<%= @school.image %>" class="img-responsive" alt="Responsive image"></p>
+  <p class="col-md-offset-5"><img src="<%= @school.image %>" class="img-responsive" alt="Responsive image"></p>
 </div>
 
 <div class="row">
   <div class="col-md-6">
     <dt>Description</dt>
     <dd>Info on the school. Mention what the school is known for and what type of school it is.<%= @school.description %></dd>
-    <button type="button" class="btn btn-primary btn-sm active">Favorite</button>
-    <button type="button" class="btn btn-default btn-sm active">Un-Favorite</button>
+
+    <!--  Favorite and Un-Favorite Buttons -->
+
+
+    <!-- Favorite.id is the Favorite.find_by(:profile_id => current_profile.id)-->
+    <% if @favorite.present? %>
+    <a href="/delete_favorite/<%= @favorite.id %>">
+      <button type="button" class="btn btn-default btn-sm active">Un-Favorite</button>
+    </a>
+    <% else %>
+    <form action="/create_favorite">
+      <input type="hidden" id="profile_id" name="profile_id" class="form-control" value="<%= current_profile.id %>">
+      <input type="hidden" id="school_id" name="school_id" class="form-control" value="<%= @school.id %>">
+      <button type="submit" value="Create Favorite" class="btn btn-primary btn-sm active">Favorite</button>
+      </form>
+
+    <% end %>
   </div>
 
   <div class="col-md-2">
-  <dt>Region</dt>
-  <p><%= @school.region %></p>
-  <dt>Location</dt>
-  <p>School's State </p>
-  <dt>Size</dt>
-  <p><%= @school.size %></p>
-  <dt>Tuition</dt>
-  <p><%= @school.tuition %></p>
+    <dt>Region</dt>
+    <p><%= @school.region %></p>
+    <dt>Location</dt>
+    <p>School's State </p>
+    <dt>Size</dt>
+    <p><%= @school.size %></p>
+    <dt>Tuition</dt>
+    <p><%= @school.tuition %></p>
 
   </div>
   <div class="col-md-3">
@@ -41,34 +56,34 @@
     <h4>Honors</h4>
 
     <dt>Percent of student with Financial Aid</dt>
-  <p><%= @school.Percent_with_Financial_Aid %></p>
+    <p><%= @school.Percent_with_Financial_Aid %></p>
 
   </div>
 
   <div class="col-md-6">
     <dl  class="dl-horizontal">
-    <h4>Getting In (Table)</h4>
-  <h6>
-    <dt>Avg GPA</dt>
-      <dd><%= @school.avg_GPA %></dd>
-      <br>
-    <dt>Avg SAT</dt>
-     <dd><%= @school.avg_SAT %></dd>
-    <dt>Lower</dt>
-     <dd><%= @school.lower_SAT %></dd>
-    <dt>Upper</dt>
-     <dd><%= @school.upper_SAT %></dd>
-     <br>
-    <dt>ACT Range</dt>
-     <dd><%= @school.avg_ACT %></dd>
-    <dt>Lower</dt>
-     <dd><%= @school.lower_ACT %></dd>
-    <dt>Upper</dt>
-     <dd><%= @school.upper_ACT %></dd>
-   <dt>Acceptance Rate</dt>
-     <dd><%= @school.acceptance_rate %></dd>
-    </h6>
-  </dl>
+      <h4>Getting In (Table)</h4>
+      <h6>
+        <dt>Avg GPA</dt>
+        <dd><%= @school.avg_GPA %></dd>
+        <br>
+        <dt>Avg SAT</dt>
+        <dd><%= @school.avg_SAT %></dd>
+        <dt>Lower</dt>
+        <dd><%= @school.lower_SAT %></dd>
+        <dt>Upper</dt>
+        <dd><%= @school.upper_SAT %></dd>
+        <br>
+        <dt>ACT Range</dt>
+        <dd><%= @school.avg_ACT %></dd>
+        <dt>Lower</dt>
+        <dd><%= @school.lower_ACT %></dd>
+        <dt>Upper</dt>
+        <dd><%= @school.upper_ACT %></dd>
+        <dt>Acceptance Rate</dt>
+        <dd><%= @school.acceptance_rate %></dd>
+      </h6>
+    </dl>
   </div>
 </div>
 

@@ -3,7 +3,7 @@ class PreferenceController < ApplicationController
   def filter
     @profile = Profile.find(params[:id])
 
-    @Error = "Error"
+    @error = "No schools available"
 
     #Region filter
 
