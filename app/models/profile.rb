@@ -4,7 +4,8 @@ class Profile < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :favorites, :through => :schools
+  has_many :favorites
+  has_many :schools, :through => :favorites
 
   validates :username, :presence => true, :uniqueness => true
   validates :email, :presence => true, :uniqueness => true

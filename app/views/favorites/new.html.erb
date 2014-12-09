@@ -25,11 +25,7 @@
               User
             </label>
             <div class="col-sm-10">
-            <select class="form-control" id="user_id" name="user_id" placeholder="Test" value="">
-             <% @profiles.each do |profile| %>
-              <option> <%= profile.username %></option>
-              <% end %>
-             </select>
+              <input type="text" id="profile_id" name="user_id" placeholder="Test" class="form-control" value="<%= current_profile.id %>">
             </div>
           </div>
 
@@ -39,7 +35,14 @@
               School
             </label>
             <div class="col-sm-10">
-              <input type="text" id="school_id" name="school_id" placeholder="School" class="form-control" value="<%= @favorite.school_id %>">
+              <!--<input type="text" id="school_id" name="school_id" placeholder="School" class="form-control" value="<%= @favorite.school_id %>">-->
+
+              <select id="school_id" name="school_id">
+                <% @schools.each do |school| %>
+                 <option value="<%= school.id %>"><%= school.name %></option>
+                <% end %>
+              </select>
+
             </div>
           </div>
 

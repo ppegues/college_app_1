@@ -23,7 +23,7 @@ class SchoolsController < ApplicationController
     @school.SAT = params[:SAT]
     @school.ACT = params[:ACT]
     @school.GPA = params[:GPA]
-    @school.Rank_Forbes = params[:Rank_Forbes]
+    @school.rank_forbes = params[:rank_forbes]
     @school.Percent_with_Financial_Aid = params[:Percent_with_Financial_Aid]
 
     if @school.save
@@ -50,7 +50,7 @@ class SchoolsController < ApplicationController
     @school.SAT = params[:SAT]
     @school.ACT = params[:ACT]
     @school.GPA = params[:GPA]
-    @school.Rank_Forbes = params[:Rank_Forbes]
+    @school.rank_forbes = params[:rank_forbes]
     @school.Percent_with_Financial_Aid = params[:Percent_with_Financial_Aid]
 
     if @school.save

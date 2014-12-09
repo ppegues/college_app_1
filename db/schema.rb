@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141201192500) do
+ActiveRecord::Schema.define(version: 20141208224501) do
 
   create_table "favorites", force: true do |t|
-    t.integer  "user_id"
+    t.integer  "profile_id"
     t.integer  "school_id"
     t.string   "acceptance_difficulty"
     t.datetime "created_at"
@@ -26,9 +26,6 @@ ActiveRecord::Schema.define(version: 20141201192500) do
     t.string   "email"
     t.string   "image"
     t.string   "high_school"
-    t.string   "GPA"
-    t.string   "SAT"
-    t.string   "ACT"
     t.text     "Extras"
     t.string   "school_size"
     t.string   "region"
@@ -44,6 +41,9 @@ ActiveRecord::Schema.define(version: 20141201192500) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.integer  "GPA"
+    t.integer  "ACT"
+    t.integer  "SAT"
   end
 
   add_index "profiles", ["email"], name: "index_profiles_on_email", unique: true
@@ -54,16 +54,16 @@ ActiveRecord::Schema.define(version: 20141201192500) do
     t.string   "description"
     t.string   "image"
     t.string   "region"
-    t.string   "size"
     t.string   "tuition"
     t.string   "acceptance_rate"
     t.string   "SAT"
     t.string   "ACT"
     t.string   "GPA"
-    t.string   "Rank_Forbes"
     t.string   "Percent_with_Financial_Aid"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "rank_forbes"
+    t.integer  "size"
   end
 
 end

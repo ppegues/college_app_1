@@ -9,12 +9,13 @@ class FavoritesController < ApplicationController
 
   def new
     @favorite = Favorite.new
-    @profiles = Profile.all
+    @profile = Profile.all
+    @schools = School.all
   end
 
   def create
     @favorite = Favorite.new
-    @favorite.user_id = params[:user_id]
+    @favorite.profile_id = params[:user_id]
     @favorite.school_id = params[:school_id]
     @favorite.acceptance_difficulty = params[:acceptance_difficulty]
 
@@ -32,7 +33,7 @@ class FavoritesController < ApplicationController
   def update
     @favorite = Favorite.find(params[:id])
 
-    @favorite.user_id = params[:user_id]
+    @favorite.profile_id = params[:user_id]
     @favorite.school_id = params[:school_id]
     @favorite.acceptance_difficulty = params[:acceptance_difficulty]
 
