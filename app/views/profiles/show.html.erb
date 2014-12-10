@@ -33,7 +33,7 @@
         <div class="row">
           <h4 class="col-md-6"><span class="label label-info">College Preferences</span></h4>
 
-          <h4 class="col-md-6"><span class="label label-warning" class="col-md-6">Saved Schools</span></h4>
+          <h4 class="col-md-6"><span class="label label-warning" class="col-md-6">Favorite Schools</span></h4>
         </div>
         <div class="row">
             <div class="col-md-6">
@@ -49,41 +49,23 @@
               <div class="col-md-offset-2"><a href="/profiles/preference/<%= @profile.id %>"><button type="button" class="btn btn-primary">See Your Recommended Schools</button></a></div>
             </div>
 
-            <div class="box">
-              <div class="text">
-              <div class="col-md-3" class="text">Stretch</div>
-              </div>
-              <div class="col-md-3">
-                <ul>
-                  <li>school 1</li>
-                  <li>school 2</li>
-                  <li>school 3</li>
-                </ul>
-              </div>
+            <div class="col-md-6">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>School</th>
+                    <th>Difficulty</th>
+                  </tr>
+                </thead>
+                <tbody>
+                <% @favorite.each do |fav| %>
+                  <tr>
+                    <td><a href="/schools/<%= fav.school_id %>"><%= fav.school.name %></a></td>
+                  </tr>
+                <% end %>
+                </tbody>
             </div>
 
-            <div class="text">
-              <div class="col-md-offset-6 col-md-3">Target</div>
-            </div>
-
-              <div class="col-md-3">
-                <ul>
-                  <li>school 1</li>
-                  <li>school 2</li>
-                  <li>school 3</li>
-                </ul>
-              </div>
-
-            <div class="text">
-            <div class="col-md-offset-6 col-md-3">Safe</div>
-            </div>
-            <div class="col-md-3">
-              <ul>
-                <li>school 1</li>
-                <li>school 2</li>
-                <li>school 3</li>
-              </ul>
-            </div>
         </div>
       </div>
     </div>

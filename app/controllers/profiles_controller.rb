@@ -5,6 +5,7 @@ class ProfilesController < ApplicationController
 
   def show
     @profile = Profile.find(params[:id])
+    @favorite = Favorite.where(:profile_id => @profile.id)
   end
 
   def new
