@@ -17,7 +17,6 @@
     <!--  Favorite and Un-Favorite Buttons -->
 
 
-    <!-- Favorite.id is the Favorite.find_by(:profile_id => current_profile.id)-->
     <% if @favorite.present? %>
     <a href="/delete_favorite/<%= @favorite.id %>">
       <button type="button" class="btn btn-default btn-sm active">Un-Favorite</button>

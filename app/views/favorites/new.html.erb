@@ -27,6 +27,11 @@
             <div class="col-sm-10">
               <input type="text" id="profile_id" name="user_id" placeholder="Username" class="form-control" value="<%= current_profile.id %>">
             </div>
+
+            <div class="col-sm-10">
+
+              <%= select_tag(:profile_id, options_from_collection_for_select(Profile.all, :id, :username),  :class => "form-control")  %>
+            </div>
           </div>
 
           <!-- Label and input for school_id -->

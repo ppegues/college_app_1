@@ -5,7 +5,7 @@ class SchoolsController < ApplicationController
 
   def show
     @school = School.find(params[:id])
-    @favorite = Favorite.find_by(:profile_id => current_profile.id)
+    @favorite = Favorite.find_by(:school_id => @school.id)
   end
 
   def new

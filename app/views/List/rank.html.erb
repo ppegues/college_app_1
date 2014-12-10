@@ -12,7 +12,7 @@
   <tbody>
    <% @schools.each do |school| %>
     <tr class="active">
-      <td><%= school.Rank_Forbes     %></td>
+      <td><%= school.rank_forbes     %></td>
       <td><a href="/schools/<%= school.id %>"><%= school.name %></a></td>
     </tr>
   <% end %>
