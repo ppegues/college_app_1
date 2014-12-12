@@ -35,8 +35,4 @@ def configure_permitted_parameters
 
 end
 
-  #@school_search = gets.chomp
-
-  #@school = School.find(:name => "@school_search")
-
 end

@@ -61,6 +61,7 @@
                 <% @favorite.each do |fav| %>
                   <tr>
                     <td><a href="/schools/<%= fav.school_id %>"><%= fav.school.name %></a></td>
+                    <td><%= fav.difficulty %></td>
                   </tr>
                 <% end %>
                 </tbody>
